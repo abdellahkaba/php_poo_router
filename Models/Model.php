@@ -26,7 +26,7 @@ class Model{
 
            $this->table = strtolower(explode('\\' , get_class($this))[1].'s');
     }
-
+//cette methode permet d'appeler toutes les informations dans une table
     public function all():array{
 
         $tatement = $this->getPDO()->query("SELECT * FROM {$this->table}");
